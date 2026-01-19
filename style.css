@@ -1,0 +1,204 @@
+/* --- RESET & VARIABLES --- */
+:root {
+    --amd-black: #111111;
+    --amd-dark: #1a1a1a;
+    --amd-red: #ED1C24;
+    --amd-orange: #FF5722;
+    --amd-white: #ffffff;
+    --text-gray: #cccccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    background-color: var(--amd-black);
+    color: var(--amd-white);
+    overflow-x: hidden;
+}
+
+/* --- NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--amd-dark);
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo .accent {
+    color: var(--amd-orange);
+}
+
+.nav-links a {
+    color: var(--amd-white);
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--amd-red);
+}
+
+/* --- PAGE TRANSITION LOGIC --- */
+.page {
+    display: none; /* Hide all pages by default */
+    padding: 50px;
+    min-height: 80vh;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.page.active {
+    display: block; /* Show only the active page */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- HOME SCREEN --- */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    border-left: 5px solid var(--amd-red);
+    background: linear-gradient(90deg, var(--amd-dark) 0%, var(--amd-black) 100%);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.text-orange { color: var(--amd-orange); }
+
+.hero button {
+    background: transparent;
+    border: 2px solid var(--amd-red);
+    color: var(--amd-white);
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.hero button:hover {
+    background: var(--amd-red);
+    box-shadow: 0 0 20px var(--amd-red);
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.stat-card {
+    background: var(--amd-dark);
+    padding: 30px;
+    width: 200px;
+    text-align: center;
+    border-top: 3px solid var(--amd-orange);
+}
+
+.stat-card h3 { font-size: 2rem; color: var(--amd-white); }
+.stat-card p { color: var(--text-gray); }
+
+/* --- PRODUCT SCREENS --- */
+.header-banner {
+    padding: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.red-bg { background: linear-gradient(45deg, var(--amd-red), darkred); }
+.orange-bg { background: linear-gradient(45deg, var(--amd-orange), darkred); }
+
+.product-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: var(--amd-dark);
+    padding: 30px;
+    border: 1px solid #333;
+    width: 300px;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--amd-red);
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: var(--text-gray);
+    margin-top: 40px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.back-btn:hover { color: var(--amd-white); text-decoration: underline; }
+
+/* --- GPU VISUAL CSS --- */
+.split-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.gpu-box {
+    width: 300px;
+    height: 120px;
+    background: #222;
+    border: 2px solid #444;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(237, 28, 36, 0.2);
+}
+
+.fan {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #555;
+    background: radial-gradient(circle, #333, #000);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+    color: #555;
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+}
