@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMD - Advance Your World</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AMD <span class="accent">///</span></div>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home')" class="active-link">Home</a>
+            <a href="#" onclick="showPage('processors')">Ryzen™</a>
+            <a href="#" onclick="showPage('graphics')">Radeon™</a>
+            <a href="#" onclick="showPage('support')">Support</a>
+        </div>
+    </nav>
+
+    <main id="content-area">
+
+        <section id="home" class="page active">
+            <div class="hero">
+                <h1>TOGETHER WE <span class="text-orange">ADVANCE_</span></h1>
+                <p>High-performance computing for the next generation.</p>
+                <button onclick="showPage('processors')">EXPLORE RYZEN</button>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>5nm</h3>
+                    <p>Process Technology</p>
+                </div>
+                <div class="stat-card">
+                    <h3>AI</h3>
+                    <p>Integrated Engines</p>
+                </div>
+                <div class="stat-card">
+                    <h3>ZEN 4</h3>
+                    <p>Architecture</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="processors" class="page">
+            <div class="header-banner red-bg">
+                <h2>RYZEN™ PROCESSORS</h2>
+            </div>
+            <div class="product-container">
+                <div class="product-card">
+                    <h3>Ryzen 9</h3>
+                    <p>The ultimate processor for gaming and streaming.</p>
+                    <div class="price">From $549</div>
+                </div>
+                <div class="product-card">
+                    <h3>Ryzen 7</h3>
+                    <p>Performance prowess for elite gaming.</p>
+                    <div class="price">From $399</div>
+                </div>
+                <div class="product-card">
+                    <h3>Ryzen 5</h3>
+                    <p>Your entry into high-performance gaming.</p>
+                    <div class="price">From $229</div>
+                </div>
+            </div>
+            <button class="back-btn" onclick="showPage('home')">← BACK HOME</button>
+        </section>
+
+        <section id="graphics" class="page">
+            <div class="header-banner orange-bg">
+                <h2>RADEON™ GRAPHICS</h2>
+            </div>
+            <div class="split-layout">
+                <div class="text-side">
+                    <h3>RX 7900 XTX</h3>
+                    <p>Breakthrough performance with Chiplet technology.</p>
+                    <ul>
+                        <li>24GB GDDR6 Memory</li>
+                        <li>AMD Radiance Display™ Engine</li>
+                        <li>High-Performance 4K Gaming</li>
+                    </ul>
+                </div>
+                <div class="visual-side">
+                    <div class="gpu-box">
+                        <div class="fan fan-1"></div>
+                        <div class="fan fan-2"></div>
+                        <div class="fan fan-3"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="back-btn" onclick="showPage('home')">← BACK HOME</button>
+        </section>
+
+        <section id="support" class="page">
+            <h2>DRIVERS & SUPPORT</h2>
+            <p>Download the latest adrenaline software or check compatibility.</p>
+            <div class="form-mockup">
+                <input type="text" placeholder="Search your product...">
+                <button>SEARCH</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Advanced Micro Devices, Inc.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
